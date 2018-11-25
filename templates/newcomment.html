@@ -35,7 +35,6 @@
     <h1>comments</h1>
     {% for c in comments %}
       <div class="container">
-	<p>this is the comment id {{ c["id"] }} </p>
         <p> {{ c["comment"] }} </p>
         <hr></hr>
         <p>Commented by: <a href={{ url_for('searchuser', search=c["user"]) }}>{{ c["user"] }}</a></p>
