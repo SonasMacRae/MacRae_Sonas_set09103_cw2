@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name ="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/navbar.css') }}">
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/newpost">Post a joke</a></li>
+  <li><a href="/displayjokes">All jokes</a></li>
+  <li><a href="/mypage/">My page</a></li>
+  <li><a href="/genres/">Genres</a></li>
+  <li><a href="/logout">Logout</a></li>
+</ul>
+{% block content %} {% endblock %}
+
+</body>
+
+</html>
+
+

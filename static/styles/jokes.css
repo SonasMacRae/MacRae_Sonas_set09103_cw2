@@ -1,0 +1,319 @@
+body
+{
+  color:#212529;
+  padding-bottom:300px;
+  background-color: #f8f9fa;
+  margin:0;  
+} 
+
+
+.errorButton
+{
+  text-align: center;
+  margin-left: 40%;
+  width: 400px;
+  height: 200px;
+  font-size: 80px;
+  background-color: black;
+  color: white;
+}
+
+
+.btn-group button
+{
+  background-color: #4CAF50;
+  border: 1px solid green; 
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+  float: left; 
+}
+
+
+.btn-group:after 
+{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.btn-group button:not(:last-child) 
+{
+  border-right: none; 
+}
+
+
+.btn-group button:hover 
+{
+  background-color: #3e8e41;
+}
+
+
+select
+{
+  font-size: 20px;
+  height: 40px;
+  width: 400px;
+}
+
+
+textarea
+{
+  font-size: 15px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+.newpostthing 
+{    
+  font-size: 20px;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20%;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+label
+{
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+
+.time
+{
+  font-size: 18px;
+}
+
+
+.ridge
+{
+  border-style: ridge;
+}
+
+
+.comments
+{
+  text-align:center;
+}
+
+
+.button:hover 
+{
+  background-color: #3e8e41
+}
+
+
+.button:active 
+{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+input
+{
+  margin-bottom: 10px;
+}
+ 
+
+.title 
+{
+  margin-top: 40px;
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-color: #e9ecef;
+  border-bottom: 200px;
+}
+
+
+a
+{
+  text-decoration: none;
+}
+
+
+h1
+{
+  color:black;
+  font-size: 80px;
+  margin-top: 45px;
+  margin-bottom: 10px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+ 
+h2
+{
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+	
+h3
+{
+  color: black;
+  font-size: 40px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+}
+
+
+h4
+{
+  color: black;
+  font-size: 40px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 310;
+  margin-top: -20px;
+}
+
+
+h5
+{
+  color:black;
+  font-size: 35px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 320;
+}
+
+   
+p
+{
+   color:black;
+   text-align: justify;
+   margin-left: 20px;
+   margin-right: 20px;
+   font-size: 20px;
+   margin-top: -7px;
+   font-family: Verdana, Geneva, sans-serif;
+}
+
+
+ul
+{
+  letter-spacing: 1px;
+  line-height: 1;
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 10;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  background-color: #343a40;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+li
+{
+  float: left;
+}
+
+
+li a
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover:not(.active)
+{
+  background-color: #111;
+}
+
+
+.genre
+{
+  text-align: center;
+  font-size: 50px;
+}
+
+
+.joke
+{
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+
+.jokestuff
+{
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 -200px;
+  background-color:red;
+}
+
+
+.container
+{
+  border-style: solid;
+  background-color: #F8F8FF;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+
+.card:hover 
+{
+  box-shadow: 0 40px 60px 0 rgba(0,0,0,0.2);
+}
+
+
+.card:active 
+{
+  background-color: black;
+  transform: translateY(10px);
+}
+
+
+.grid-container 
+{
+  margin-left: 15%;
+  display: grid;
+  grid-template-columns: 80%;
+}
+
+
+.grid-container-genres 
+{
+  margin-left: 15%;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+}
+
+
+.joke_info
+{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 90px;
+}

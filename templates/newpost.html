@@ -1,0 +1,31 @@
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/jokes.css') }}">
+</head>
+<body>
+{% extends "navbar.html" %}
+{% block content %}
+<div class="title">
+<h1>post a joke to the website</h1>
+</div>
+<div class="newpostthing">
+  <form action="/postjoke" method="POST">
+    <textarea cols="95" rows="5" name="joke">
+    </textarea>
+    <label for "genre">Select joke type</label>
+    <select id="genre" placeholder="insert something" name="category">
+      <option value="Yo mamma">Yo mamma</option>
+      <option value="Dad jokes">Dad jokes</option>
+      <option value="Knock-knock">Knock knock</option>
+      <option value="Anti-joke">Anti-joke</option>
+      <option value="Classic Q&A">Classic</option>
+      <option value="Anecdote">Anecdote</option>
+      <option value="One-liner">One-liner</option>
+      <option value="Other">Other</option>
+    </select>
+    <div class="btn-group">
+    <button class="button" type="submit">Post</button>
+    </div>
+  </form>
+</div>
+{% endblock %}}
+</body>

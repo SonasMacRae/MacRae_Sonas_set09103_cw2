@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+ <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/jokes.css') }}">
+</head>
+<body>
+{% extends "navbar.html" %}
+{% block content %}
+<div class="title">
+  <h1>Comments page</h1>
+</div>
+<div class="grid-container">
+  {% for j in jokes %}
+    <div class="container">
+     <h2><b>A <a href={{ url_for('filterjokes', search=j["genre"]) }}</a> joke by <a href={{ url_for('searchuser', search=j["user"]) }}>{{ j["user"] }}</a></b></h2>
+     <p> {{ j["joke"] }} </p>
+     <hr></hr>
+     <p class="time"><b> Time Posted: </b> {{ j["time"] }}</p>
+   {% endfor %}
+    </div>
+</div>
+
+<div class="newpostthing">
+  <h2>Post a new comment:</h2>
+  <form action="/postcomment" method="POST">
+    <textarea cols="95" rows="5" name="comment">
+    </textarea>
+    <div class="btn-group">
+      <button class="button" type="submit">Post comment</button>
+    </div>
+  </form>
+</div>
+
+<div class="comments">
+  <div class="grid-container">
+    <h1>comments</h1>
+    {% for c in comments %}
+      <div class="container">
+	<p>this is the comment id {{ c["id"] }} </p>
+        <p> {{ c["comment"] }} </p>
+        <hr></hr>
+        <p>Commented by: <a href={{ url_for('searchuser', search=c["user"]) }}>{{ c["user"] }}</a></p>
+        <p> Time Posted: {{ c["time"] }}</p>
+      <div class="btn-group">
+          {% if session["username"] == c["user"] %}
+	    <form action="{{ url_for('deletecomment') }}" method=post>
+            <input type="hidden" name="cid" value="{{ c["id"] }}">
+            <button class="button" type="submit" value="Delete">Delete</button>
+          </form>
+          <a href="{{ url_for('updatethecomment', commentid=c["id"]) }}"><button class="button">update comment</button></a>
+{% endif %}  
+    </div>
+  </div>
+{% endfor %}
+</div> 
+</div>
+{% endblock %}}
+</body>

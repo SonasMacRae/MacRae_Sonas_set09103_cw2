@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/jokes.css') }}">
+</head>
+<body>
+ {% extends "navbar.html" %}
+ {% block content %}
+<div class="title">
+ <h1> {{ category }} jokes </h1>
+</div>
+
+ 
+  <div class="grid-container">
+    {% for j in jokes %}
+      <div class="container">
+        <h2><b>A <a href={{ url_for('filterjokes', search=j["genre"]) }}>{{ j["genre"] }}</a> joke by <a href={{ url_for('searchuser', search=j["user"]) }}>{{ j["user"] }}</a></b></h2>
+        <p> {{ j["joke"] }} </p>
+	<hr></hr>
+	<p class="time"><b> Time posted: </b> {{ j["time"] }} </p>
+        <div class="btn-group">
+        <a href={{ url_for('newcomment', jokeid=j["jokeid"]) }}><button>Comments</button></a>
+        {% if session["username"] == j["user"] %}
+          <form action="{{ url_for('deletepost') }}" method=post>
+            <input type="hidden" name="jid" value="{{ j["jokeid"] }}">
+            <input type="hidden" name="pagetype" value="homepage">
+            <button class="button" type="submit" value="Delete">Delete</button>
+          </form>
+        {% endif %}
+      </div>
+      </div>
+    {% endfor %}
+  </div>
+ </div>
+
+{% endblock %}}
+</body>

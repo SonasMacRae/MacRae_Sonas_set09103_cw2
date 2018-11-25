@@ -1,0 +1,23 @@
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/jokes.css') }}">
+</head>
+<body>
+{% extends "navbar.html" %}
+{% block content %}
+<div class="title">
+<h1>Update your joke</h1>
+</div>
+{% for j in jokes %}
+<div class="newpostthing">
+<form action="{{ url_for('updatepost') }}" method=post>
+  <textarea cols="95" rows="5" name="joke">{{ j["joke"] }}</textarea>
+
+  <div class="btn-group">
+  <input type="hidden" value="{{ j["jokeid"] }}" name="jid">
+  <button class="button" type="submit">Update</button>
+  </div>
+</form>
+</div>
+{% endfor %}
+{% endblock %}}
+</body>

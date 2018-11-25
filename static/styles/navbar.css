@@ -1,0 +1,43 @@
+ul
+{
+ letter-spacing: 1px;
+ line-height: 1;
+ text-align: center;
+ font-family: 'Helvetica Neue', sans-serif;
+ list-style-type: none;
+ margin: 0;
+ padding: 10;
+ padding-top: 5px;
+ padding-bottom: 5px;
+ overflow: hidden;
+ background-color: #343a40;
+ position: absolute;
+ top: 0;
+ width: 100%;
+}
+
+li a
+{
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+}
+
+li
+{
+ float: left;
+}
+
+li a:hover:not(.active)
+{
+ background-color: #111;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}

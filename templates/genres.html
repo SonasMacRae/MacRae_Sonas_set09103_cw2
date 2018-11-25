@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+ <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/jokes.css') }}">
+</head>
+<body>
+{% extends "navbar.html" %}
+{% block content %}
+<div class="title">
+<h1> Genres </h1>
+</div>
+
+<div class="grid-container">
+{% for g in genres %}
+<a style="none" href={{ url_for('filterjokes', search=g)}}> <div class="container">
+<p class="genre"> {{ g }} </p> 
+</div></a>
+{% endfor %}
+</div>
+
+
+{% endblock %}
+</body>
